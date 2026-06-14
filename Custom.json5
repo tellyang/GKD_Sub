@@ -1,0 +1,405 @@
+{
+    id: 870826,
+    name: "个人规则",
+    version: 21,
+    author: "❤️",
+    checkUpdateUrl: "https://gh-proxy.org/https://raw.githubusercontent.com/tellyang/GKD_Sub/refs/heads/main/Custom.json5",
+    categories: [
+        {
+            key: 1,
+            name: "广告",
+        },
+        {
+            key: 2,
+            name: "功能",
+        },
+    ],
+    apps: [
+        {
+            id: "com.huawei.android.internal.app",
+            name: "System Share",
+            groups: [
+                {
+                    key: 1,
+                    name: "功能：微信支付-自动选择",
+                    desc: "",
+                    matchTime: 10000,
+                    actionMaximum: 1,
+                    actionDelay: 100,
+                    activityIds: ".HwChooserActivity",
+                    snapshotUrls: "https://i.gkd.li/i/28911694",
+                    fastQuery: true,
+                    rules: [
+                        {
+                            matches: '[name="android.widget.LinearLayout"][index=0] > @[name="android.widget.LinearLayout"][index=0] + [id="android:id/text1"][text="微信"]',
+                        },
+                    ],
+                },
+            ],
+        },
+        {
+            id: "com.tencent.mm",
+            name: "微信",
+            groups: [
+                {
+                    key: 1,
+                    name: "功能：撤回消息自动重新编辑",
+                    desc: "",
+                    matchTime: 10000,
+                    actionMaximum: 1,
+                    activityIds: ".ui.LauncherUI",
+                    snapshotUrls: "https://i.gkd.li/i/28890299",
+                    fastQuery: true,
+                    rules: [
+                        {
+                            position: {
+                                left: "width*0.82",
+                                top: "height*0.5",
+                            },
+                            matches: '[name="android.view.ViewGroup"][desc="微信的标题栏。"] > * [id="com.tencent.mm:id/bp0"][name="androidx.recyclerview.widget.RecyclerView"] > [name="android.widget.LinearLayout"][index=parent.childCount.minus(1)] >2 [id="com.tencent.mm:id/bkl"][text="你撤回了一条消息  重新编辑"]',
+                        },
+                    ],
+                },
+                {
+                    key: 2,
+                    name: "广告：关闭小程序弹窗",
+                    desc: "EMS,e生活plus,顺丰快递",
+                    actionDelay: 200,
+                    fastQuery: true,
+                    actionMaximum: 1,
+                    matchTime: 10000,
+                    snapshotUrls: [
+                        "https://i.gkd.li/i/28858480",
+                        "https://i.gkd.li/i/28860337",
+                        "https://i.gkd.li/i/28897376",
+                    ],
+                    activityIds: [
+                        ".plugin.appbrand.ui.AppBrandUI00",
+                        ".plugin.appbrand.ui.AppBrandUI01",
+                        ".plugin.appbrand.ui.AppBrandUI02",
+                        ".plugin.appbrand.ui.AppBrandUI03",
+                        ".plugin.appbrand.ui.AppBrandUI04",
+                        ".plugin.appbrand.ui.AppBrandUI05",
+                        ".plugin.appbrand.ui.AppBrandUI06",
+                        ".plugin.appbrand.ui.AppBrandUI07",
+                        ".plugin.appbrand.ui.AppBrandUI08",
+                        ".plugin.appbrand.ui.AppBrandUI09",
+                    ],
+                    rules: [
+                        {
+                            anyMatches: [
+                                '[id="com.tencent.mm:id/w_"] > * [name="android.widget.FrameLayout"] >3 [name="android.widget.Image"][width=69][height=69]',
+                                '[name="android.view.View"] > [name="android.widget.ListView"] + [name="android.widget.Image"][width=105][height=108]',
+                                '[name="android.view.View"] > [name="android.widget.Image"][desc="广告"] + [name="android.widget.Image"][width=80][height=77]',
+                            ],
+                        },
+                    ],
+                },
+                {
+                    key: 3,
+                    name: "功能：EMS寄快递页面自动勾选同意",
+                    desc: "",
+                    matchTime: 10000,
+                    actionMaximum: 1,
+                    fastQuery: true,
+                    activityIds: [
+                        ".plugin.appbrand.ui.AppBrandUI00",
+                        ".plugin.appbrand.ui.AppBrandUI01",
+                        ".plugin.appbrand.ui.AppBrandUI02",
+                        ".plugin.appbrand.ui.AppBrandUI03",
+                        ".plugin.appbrand.ui.AppBrandUI04",
+                        ".plugin.appbrand.ui.AppBrandUI05",
+                        ".plugin.appbrand.ui.AppBrandUI06",
+                        ".plugin.appbrand.ui.AppBrandUI07",
+                        ".plugin.appbrand.ui.AppBrandUI08",
+                        ".plugin.appbrand.ui.AppBrandUI09",
+                    ],
+                    rules: [
+                        {
+                            key: 1,
+                            name: "勾选圆点",
+                            matches: '[name="android.widget.FrameLayout"][index=1] >3 @[name="android.widget.Image"] + [name="android.widget.TextView"][text^="阅读并同意"]',
+                            snapshotUrls: "https://i.gkd.li/i/28883511",
+                        },
+                        {
+                            key: 2,
+                            name: "点击同意",
+                            preKeys: 1,
+                            matches: '[name="android.widget.TextView"][text="我已阅读并同意"]',
+                            snapshotUrls: "https://i.gkd.li/i/28899566",
+                        },
+                    ],
+                },
+            ],
+        },
+        {
+            id: "com.android.incallui",
+            name: "电话",
+            groups: [
+                {
+                    key: 1,
+                    name: "功能：自动免提",
+                    actionCd: 1000,
+                    actionMaximum: 1,
+                    matchTime: 10000,
+                    snapshotUrls: ["https://i.gkd.li/i/28861158"],
+                    activityIds: [".InCallActivity"],
+                    rules: [
+                        {
+                            matches: ['[id="com.android.incallui:id/showAudio"]'],
+                        },
+                    ],
+                },
+            ],
+        },
+        {
+            id: "com.icbc.elife",
+            name: "工银e生活",
+            groups: [
+                {
+                    key: 1,
+                    name: "广告：关闭首页弹窗广告",
+                    fastQuery: true,
+                    actionMaximum: 1,
+                    matchTime: 10000,
+                    snapshotUrls: ["https://i.gkd.li/i/28860715"],
+                    activityIds: [".MainActivity"],
+                    rules: [
+                        {
+                            matches: [
+                                '[id="com.icbc.elife:id/iv_close"][name="android.widget.ImageView"]',
+                            ],
+                        },
+                    ],
+                },
+            ],
+        },
+        {
+            id: "tv.danmaku.bili",
+            name: "哔哩哔哩",
+            groups: [
+                {
+                    key: 1,
+                    name: "功能：视频自动⏩x1.5倍速⚠️三选一",
+                    desc: "依次点击 ①视频 ②更多 ③1.5倍速",
+                    actionCd: 3000,
+                    fastQuery: true,
+                    actionMaximum: 1,
+                    actionDelay: 200,
+                    resetMatch: "match",
+                    activityIds: ["com.bilibili.ship.theseus.detail.UnitedBizDetailsActivity"],
+                    rules: [
+                        {
+                            key: 0,
+                            matches: ['[id="tv.danmaku.bili:id/video_area_float_layer_container"]'],
+                            snapshotUrls: ["https://i.gkd.li/i/25314184"],
+                        },
+                        {
+                            key: 1,
+                            preKeys: [0],
+                            matches: [
+                                '[vid="toolbar_action_overflow"][desc^="更多"][clickable=true]',
+                            ],
+                            snapshotUrls: ["https://i.gkd.li/i/25314223"],
+                        },
+                        {
+                            preKeys: [1],
+                            matches: [
+                                '[text="倍速"] + * >2 @[clickable=true] > [vid="title"][text="1.5"][visibleToUser=true]',
+                            ],
+                            snapshotUrls: ["https://i.gkd.li/i/25314490"],
+                        },
+                    ],
+                },
+            ],
+        },
+        {
+            id: "com.cainiao.wireless",
+            name: "菜鸟",
+            groups: [
+                {
+                    key: 12,
+                    name: "功能：自动切换至“全部快递”界面",
+                    fastQuery: true,
+                    actionMaximum: 1,
+                    matchTime: 5000,
+                    resetMatch: "app",
+                    snapshotUrls: ["https://i.gkd.li/i/28856900"],
+                    activityIds: [".homepage.view.activity.HomePageActivity"],
+                    rules: [
+                        {
+                            matches: [
+                                '[name="android.widget.FrameLayout"][desc="首页"] + [name="android.widget.FrameLayout"][desc="全部快递"] > [name="android.widget.RelativeLayout"] > [id="com.cainiao.wireless:id/tv_name"][text="全部快递"]',
+                            ],
+                        },
+                    ],
+                },
+            ],
+        },
+        {
+            id: "com.taobao.taobao",
+            name: "淘宝",
+            groups: [
+                {
+                    key: 1,
+                    name: "关闭外卖下单后弹窗",
+                    actionCd: 3000,
+                    fastQuery: true,
+                    actionMaximum: 1,
+                    matchTime: 10000,
+                    snapshotUrls: ["https://i.gkd.li/i/28865925"],
+                    activityIds: ["com.taobao.themis.container.app.TMSActivity"],
+                    rules: [
+                        {
+                            position: {
+                                left: "width*0.92",
+                                top: "height*0.58",
+                            },
+                            matches: [
+                                '[id="com.taobao.taobao:id/layermanager_penetrate_webview_container_id"][name="android.widget.FrameLayout"]',
+                            ],
+                        },
+                    ],
+                },
+                {
+                    key: 2,
+                    name: "取消订单后弹出推广",
+                    fastQuery: true,
+                    actionMaximum: 1,
+                    actionDelay: 500,
+                    matchTime: 10000,
+                    snapshotUrls: ["https://i.gkd.li/i/28914842"],
+                    activityIds: [
+                        "com.alibaba.android.ultron.vfw.weex2.highPerformance.widget.UltronTradeHybridActivity",
+                    ],
+                    rules: [
+                        {
+                            position: {
+                                left: "width*0.918",
+                                top: "height*0.044",
+                            },
+                            matches: [
+                                '[id="com.taobao.taobao:id/render_container"][name="android.widget.FrameLayout"] >2 [name="android.widget.FrameLayout"][childCount=0]',
+                            ],
+                        },
+                    ],
+                },
+            ],
+        },
+        {
+            id: "com.unionpay",
+            name: "云闪付",
+            groups: [
+                {
+                    key: 1,
+                    name: "广告：关闭首页悬浮广告",
+                    fastQuery: true,
+                    actionMaximum: 1,
+                    matchTime: 10000,
+                    resetMatch: "app",
+                    snapshotUrls: ["https://i.gkd.li/i/28862970"],
+                    activityIds: [".activity.UPActivityMain"],
+                    rules: [
+                        {
+                            position: {
+                                left: "width*0.82",
+                                top: "height*0.75",
+                            },
+                            matches: [
+                                '[id="com.unionpay:id/close_view"][name="android.widget.ImageView"]',
+                            ],
+                        },
+                    ],
+                },
+                {
+                    key: 2,
+                    name: "功能：卡管理页面-自动展开卡片",
+                    desc: "①显示余额②展开",
+                    actionCd: 3000,
+                    fastQuery: true,
+                    actionMaximum: 1,
+                    matchTime: 10000,
+                    adtionDelay: 100,
+                    resetMatch: "app",
+                    snapshotUrls: ["https://i.gkd.li/i/28861645"],
+                    activityIds: [".activity.UPActivityMain"],
+                    rules: [
+                        {
+                            name: "①显示余额",
+                            matches: [
+                                '@[id="com.unionpay:id/eye"][desc="显示"] + [id="com.unionpay:id/expland_text"][text="展开"]',
+                            ],
+                        },
+                        {
+                            name: "②展开",
+                            preKeys: [1],
+                            matches: [
+                                '[id="com.unionpay:id/eye"][desc="显示"] + [id="com.unionpay:id/expland_text"][text="展开"]',
+                            ],
+                        },
+                    ],
+                },
+
+                {
+                    key: 3,
+                    name: "广告：开屏广告",
+                    fastQuery: true,
+                    actionMaximum: 1,
+                    matchTime: 10000,
+                    snapshotUrls: ["https://i.gkd.li/i/28929435"],
+                    activityIds: [".activity.UPActivityMain"],
+                    rules: '[id="com.unionpay:id/jumpContainer"][name="android.widget.RelativeLayout"] > [id="com.unionpay:id/jump"][name="android.widget.TextView"][text^="跳过"]',
+                },
+            ],
+        },
+        {
+            id: "enfc.metro",
+            name: "亿通行",
+            groups: [
+                {
+                    key: 1,
+                    name: "功能：退出时自动点击确定",
+                    fastQuery: true,
+                    actionDelay: 200,
+                    actionMaximum: 1,
+                    matchTime: 10000,
+                    snapshotUrls: ["https://i.gkd.li/i/28922938"],
+                    activityIds: [".main.MainActivity"],
+                    rules: '[id="enfc.metro:id/layoutMainDialog"][name="android.widget.LinearLayout"] > [id="enfc.metro:id/tvTitleSub1Content"] + * > [id="enfc.metro:id/btnRightMain"][text="确认"]',
+                },
+            ],
+        },
+        {
+            id: "com.umetrip.android.msky.app",
+            name: "航旅纵横",
+            groups: [
+                {
+                    key: 1,
+                    name: "广告：首页底部横幅广告",
+                    fastQuery: true,
+                    actionMaximum: 1,
+                    matchTime: 10000,
+                    snapshotUrls: ["https://i.gkd.li/i/28929434"],
+                    activityIds: ["com.umetrip.android.msky.homepage.activity.UmeHomeActivity"],
+                    rules: '[id="com.umetrip.android.msky.app:id/iv_bottomOperateClose"][name="android.widget.ImageView"]',
+                },
+            ],
+        },
+        {
+            id: "com.taobao.etao",
+            name: "一淘",
+            groups: [
+                {
+                    key: 1,
+                    name: "广告：天天开红包弹窗广告",
+                    fastQuery: true,
+                    actionMaximum: 1,
+                    matchTime: 10000,
+                    snapshotUrls: ["https://i.gkd.li/i/28929439"],
+                    activityIds: [".app.homev4.HomeV4Activity"],
+                    rules: '[id="com.taobao.etao:id/dialog_container"][name="android.widget.LinearLayout"] >2 @[name="android.widget.ImageView"] + [name="android.widget.ImageView"]',
+                },
+            ],
+        },
+    ],
+}

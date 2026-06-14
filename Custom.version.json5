@@ -1,0 +1,5 @@
+{
+    id: 870826,
+    version: 2,
+    checkUpdateUrl: "./Custom.version.json5",
+}
