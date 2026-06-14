@@ -360,16 +360,13 @@
                 {
                     key: 1,
                     name: "功能：退出时自动点击确定",
-                    rules: [
-                        {
-                            fastQuery: true,
-                            actionMaximum: 1,
-                            matchTime: 10000,
-                            snapshotUrls: ["https://i.gkd.li/i/28922938"],
-                            activityIds: [".main.MainActivity"],
-                            matches: '[id="enfc.metro:id/layoutMainDialog"][name="android.widget.LinearLayout"] > [id="enfc.metro:id/tvTitleSub1Content"] + * > [id="enfc.metro:id/btnRightMain"][text="确认"]',
-                        },
-                    ],
+                    fastQuery: true,
+                    actionDelay: 200,
+                    actionMaximum: 1,
+                    matchTime: 10000,
+                    snapshotUrls: ["https://i.gkd.li/i/28922938"],
+                    activityIds: [".main.MainActivity"],
+                    rules: 'Button[vid="btnRightMain"][text="确认"]',
                 },
             ],
         },
