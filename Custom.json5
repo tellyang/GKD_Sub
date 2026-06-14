@@ -1,7 +1,7 @@
 {
     id: 870826,
     name: "个人规则",
-    version: 22,
+    version: 23,
     author: "❤️",
     checkUpdateUrl: "https://gh-proxy.org/https://raw.githubusercontent.com/tellyang/GKD_Sub/refs/heads/main/Custom.json5",
     categories: [
@@ -14,6 +14,7 @@
             name: "功能",
         },
     ],
+    globalGroups: [],
     apps: [
         {
             id: "com.huawei.android.internal.app",
@@ -359,13 +360,16 @@
                 {
                     key: 1,
                     name: "功能：退出时自动点击确定",
-                    fastQuery: true,
-                    actionDelay: 200,
-                    actionMaximum: 1,
-                    matchTime: 10000,
-                    snapshotUrls: ["https://i.gkd.li/i/28922938"],
-                    activityIds: [".main.MainActivity"],
-                    rules: '[id="enfc.metro:id/layoutMainDialog"][name="android.widget.LinearLayout"] > [id="enfc.metro:id/tvTitleSub1Content"] + * > [id="enfc.metro:id/btnRightMain"][text="确认"]',
+                    rules: [
+                        {
+                            fastQuery: true,
+                            actionMaximum: 1,
+                            matchTime: 10000,
+                            snapshotUrls: ["https://i.gkd.li/i/28922938"],
+                            activityIds: [".main.MainActivity"],
+                            matches: '[id="enfc.metro:id/layoutMainDialog"][name="android.widget.LinearLayout"] > [id="enfc.metro:id/tvTitleSub1Content"] + * > [id="enfc.metro:id/btnRightMain"][text="确认"]',
+                        },
+                    ],
                 },
             ],
         },
