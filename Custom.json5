@@ -1,7 +1,7 @@
 {
     id: 870826,
     name: "个人规则",
-    version: 1,
+    version: 2,
     author: "❤️",
     checkUpdateUrl: "https://gh-proxy.org/https://raw.githubusercontent.com/tellyang/GKD_Sub/refs/heads/main/Custom.json5",
     categories: [
@@ -245,7 +245,6 @@
                 {
                     key: 1,
                     name: "关闭外卖下单后弹窗",
-                    actionCd: 3000,
                     fastQuery: true,
                     actionMaximum: 1,
                     matchTime: 10000,
@@ -294,15 +293,24 @@
             groups: [
                 {
                     key: 1,
-                    name: "广告：关闭首页悬浮广告",
+                    name: "广告：①开屏广告②首页悬浮广告",
                     fastQuery: true,
                     actionMaximum: 1,
                     matchTime: 10000,
                     resetMatch: "app",
-                    snapshotUrls: ["https://i.gkd.li/i/28862970"],
                     activityIds: [".activity.UPActivityMain"],
                     rules: [
                         {
+                            key: 0,
+                            name: "①开屏广告",
+                            matches: [
+                                '[id="com.unionpay:id/jumpContainer"][name="android.widget.RelativeLayout"] > [id="com.unionpay:id/jump"][name="android.widget.TextView"][text^="跳过"]',
+                            ],
+                            snapshotUrls: ["https://i.gkd.li/i/28929435"],
+                        },
+                        {
+                            key: 1,
+                            name: "②首页悬浮广告",
                             position: {
                                 left: "width*0.82",
                                 top: "height*0.75",
@@ -310,18 +318,28 @@
                             matches: [
                                 '[id="com.unionpay:id/close_view"][name="android.widget.ImageView"]',
                             ],
+                            snapshotUrls: ["https://i.gkd.li/i/28862970"],
                         },
                     ],
                 },
                 {
                     key: 2,
-                    name: "功能：卡管理页面-自动展开卡片",
-                    desc: "①显示余额②展开",
-                    actionCd: 3000,
+                    name: "广告：还款页面弹窗广告",
                     fastQuery: true,
                     actionMaximum: 1,
                     matchTime: 10000,
-                    adtionDelay: 100,
+                    snapshotUrls: ["https://i.gkd.li/i/28961160"],
+                    activityIds: [".activity.react.UPActivityReactNative"],
+                    rules: '@ImageView[width=57][height=57] < ViewGroup + TextView[text^="申卡限时专享"]',
+                },
+                {
+                    key: 3,
+                    name: "功能：卡管理页面-自动展开卡片",
+                    desc: "①显示余额②展开",
+                    fastQuery: true,
+                    actionMaximum: 1,
+                    matchTime: 10000,
+                    actionDelay: 200,
                     resetMatch: "app",
                     snapshotUrls: ["https://i.gkd.li/i/28861645"],
                     activityIds: [".activity.UPActivityMain"],
@@ -340,17 +358,6 @@
                             ],
                         },
                     ],
-                },
-
-                {
-                    key: 3,
-                    name: "广告：开屏广告",
-                    fastQuery: true,
-                    actionMaximum: 1,
-                    matchTime: 10000,
-                    snapshotUrls: ["https://i.gkd.li/i/28929435"],
-                    activityIds: [".activity.UPActivityMain"],
-                    rules: '[id="com.unionpay:id/jumpContainer"][name="android.widget.RelativeLayout"] > [id="com.unionpay:id/jump"][name="android.widget.TextView"][text^="跳过"]',
                 },
             ],
         },
