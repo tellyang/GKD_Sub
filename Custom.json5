@@ -1,7 +1,7 @@
 {
     id: 870826,
     name: "个人规则",
-    version: 2,
+    version: 3,
     author: "❤️",
     checkUpdateUrl: "https://gh-proxy.org/https://raw.githubusercontent.com/tellyang/GKD_Sub/refs/heads/main/Custom.json5",
     categories: [
@@ -424,7 +424,7 @@
                     activityIds: [".ui.HomeActivity"],
                     rules: [
                         {
-                            anymatch: [
+                            anyMatches: [
                                 'ImageView[id="com.ideal.flyerteacafes:id/image"] + ImageView[id="com.ideal.flyerteacafes:id/close"]',
                                 'ImageView[id="com.ideal.flyerteacafes:id/iv_bg"] < FrameLayout + ImageView[id="com.ideal.flyerteacafes:id/iv_close"]',
                             ],
