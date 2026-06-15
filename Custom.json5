@@ -1,7 +1,7 @@
 {
     id: 870826,
     name: "个人规则",
-    version: 0,
+    version: 1,
     author: "❤️",
     checkUpdateUrl: "https://gh-proxy.org/https://raw.githubusercontent.com/tellyang/GKD_Sub/refs/heads/main/Custom.json5",
     categories: [
@@ -141,6 +141,7 @@
                     key: 1,
                     name: "功能：自动免提",
                     actionCd: 1000,
+                    resetMatch: "app",
                     actionMaximum: 1,
                     matchTime: 10000,
                     snapshotUrls: ["https://i.gkd.li/i/28861158"],
