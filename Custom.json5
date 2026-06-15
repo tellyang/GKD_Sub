@@ -403,5 +403,28 @@
                 },
             ],
         },
+        {
+            id: "com.ideal.flyerteacafes",
+            name: "飞客",
+            groups: [
+                {
+                    key: 1,
+                    name: "广告：弹窗广告",
+                    fastQuery: true,
+                    actionMaximum: 1,
+                    matchTime: 10000,
+                    snapshotUrls: ["https://i.gkd.li/i/28960789", "https://i.gkd.li/i/28960781"],
+                    activityIds: [".ui.HomeActivity"],
+                    rules: [
+                        {
+                            anymatch: [
+                                'ImageView[id="com.ideal.flyerteacafes:id/image"] + ImageView[id="com.ideal.flyerteacafes:id/close"]',
+                                'ImageView[id="com.ideal.flyerteacafes:id/iv_bg"] < FrameLayout + ImageView[id="com.ideal.flyerteacafes:id/iv_close"]',
+                            ],
+                        },
+                    ],
+                },
+            ],
+        },
     ],
 }
