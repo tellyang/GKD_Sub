@@ -372,6 +372,7 @@
                     actionDelay: 200,
                     actionMaximum: 1,
                     matchTime: 10000,
+                    resetMatch: "match",
                     snapshotUrls: ["https://i.gkd.li/i/28922938"],
                     activityIds: [".main.MainActivity"],
                     rules: 'Button[vid="btnRightMain"][text="确认"]',
