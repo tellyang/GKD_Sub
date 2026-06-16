@@ -1,7 +1,7 @@
 {
     id: 870826,
     name: "个人规则",
-    version: 3,
+    version: 4,
     author: "❤️",
     checkUpdateUrl: "https://gh-proxy.org/https://raw.githubusercontent.com/tellyang/GKD_Sub/refs/heads/main/Custom.json5",
     categories: [
@@ -431,6 +431,22 @@
                             ],
                         },
                     ],
+                },
+            ],
+        },
+        {
+            id: "com.icbc",
+            name: "中国工商银行",
+            groups: [
+                {
+                    key: 1,
+                    name: "功能：退出时自动点击返回",
+                    fastQuery: true,
+                    actionMaximum: 1,
+                    matchTime: 10000,
+                    snapshotUrls: ["https://i.gkd.li/i/29009609"],
+                    activityIds: [".bizcomponent.login.activity.FarewellActivity"],
+                    rules: 'LinearLayout[id="com.icbc:id/bottomLayout"] > @TextView[text="返回"] + TextView[text="更换用户登录"] + TextView[text="重新登录"]',
                 },
             ],
         },
