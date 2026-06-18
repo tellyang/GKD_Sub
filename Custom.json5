@@ -1,7 +1,7 @@
 {
     id: 870826,
     name: "个人规则",
-    version: 4,
+    version: 5,
     author: "❤️",
     checkUpdateUrl: "https://gh-proxy.org/https://raw.githubusercontent.com/tellyang/GKD_Sub/refs/heads/main/Custom.json5",
     categories: [
@@ -303,6 +303,7 @@
                         {
                             key: 0,
                             name: "①开屏广告",
+                            adtion: "clickCenter",
                             matches: [
                                 '[id="com.unionpay:id/jumpContainer"][name="android.widget.RelativeLayout"] > [id="com.unionpay:id/jump"][name="android.widget.TextView"][text^="跳过"]',
                             ],
@@ -447,6 +448,24 @@
                     snapshotUrls: ["https://i.gkd.li/i/29009609"],
                     activityIds: [".bizcomponent.login.activity.FarewellActivity"],
                     rules: 'LinearLayout[id="com.icbc:id/bottomLayout"] > @TextView[text="返回"] + TextView[text="更换用户登录"] + TextView[text="重新登录"]',
+                },
+            ],
+        },
+        {
+            id: "com.max.xiaoheihe",
+            name: "小黑盒",
+            groups: [
+                {
+                    key: 1,
+                    name: "功能：自动点击签到",
+                    fastQuery: true,
+                    actionMaximum: 1,
+                    matchTime: 10000,
+                    resetMatch: "app",
+                    actionDelay: 200,
+                    snapshotUrls: ["https://i.gkd.li/i/29111734"],
+                    activityIds: [".MainActivity"],
+                    rules: 'FrameLayout[vid="cv_confirm"] > TextView[vid="tv_confirm"][text="确定"]',
                 },
             ],
         },
