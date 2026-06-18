@@ -1,7 +1,7 @@
 {
     id: 870826,
     name: "个人规则",
-    version: 5,
+    version: 6,
     author: "❤️",
     checkUpdateUrl: "https://gh-proxy.org/https://raw.githubusercontent.com/tellyang/GKD_Sub/refs/heads/main/Custom.json5",
     categories: [
@@ -303,7 +303,7 @@
                         {
                             key: 0,
                             name: "①开屏广告",
-                            adtion: "clickCenter",
+                            action: "clickCenter",
                             matches: [
                                 '[id="com.unionpay:id/jumpContainer"][name="android.widget.RelativeLayout"] > [id="com.unionpay:id/jump"][name="android.widget.TextView"][text^="跳过"]',
                             ],
