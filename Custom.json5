@@ -1,7 +1,7 @@
 {
     id: 870826,
     name: "个人规则",
-    version: 7,
+    version: 8,
     author: "❤️",
     checkUpdateUrl: "https://gh-proxy.org/https://raw.githubusercontent.com/tellyang/GKD_Sub/refs/heads/main/Custom.json5",
     categories: [
@@ -478,21 +478,20 @@
                     name: "广告：跳过游戏",
                     desc: "①点击右上角②点击不感兴趣",
                     fastQuery: true,
-                    actionMaximum: 1,
-                    matchTime: 10000,
                     actionDelay: 200,
                     resetMatch: "match",
-                    snapshotUrls: ["https://i.gkd.li/snapshot/1783580713445"],
                     activityIds: ["com.dragon.read.component.shortvideo.impl.ShortSeriesActivity"],
                     rules: [
                         {
                             name: "①点击右上角",
+                            snapshotUrls: ["https://i.gkd.li/snapshot/1783580713445"],
                             matches: [
                                 'FrameLayout[id="com.phoenix.read:id/awl"] >5  ViewGroup[width=60][height=60]',
                             ],
                         },
                         {
                             name: "②点击不感兴趣",
+                            snapshotUrls: ["https://i.gkd.li/snapshot/1783582339999"],
                             preKeys: [1],
                             matches: [
                                 'TextView[id="com.phoenix.read:id/jd6"][text="不喜欢该游戏"]',
