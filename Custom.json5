@@ -1,7 +1,7 @@
 {
     id: 870826,
     name: "个人规则",
-    version: 8,
+    version: 9,
     author: "❤️",
     checkUpdateUrl: "https://gh-proxy.org/https://raw.githubusercontent.com/tellyang/GKD_Sub/refs/heads/main/Custom.json5",
     categories: [
@@ -478,7 +478,7 @@
                     name: "广告：跳过游戏",
                     desc: "①点击右上角②点击不感兴趣",
                     fastQuery: true,
-                    actionDelay: 200,
+                    actionDelay: 300,
                     resetMatch: "match",
                     activityIds: ["com.dragon.read.component.shortvideo.impl.ShortSeriesActivity"],
                     rules: [
