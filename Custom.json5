@@ -1,7 +1,7 @@
 {
     id: 870826,
     name: "个人规则",
-    version: 11,
+    version: 12,
     author: "❤️",
     checkUpdateUrl: "https://gh-proxy.org/https://raw.githubusercontent.com/tellyang/GKD_Sub/refs/heads/main/Custom.json5",
     categories: [
@@ -477,12 +477,12 @@
                     key: 1,
                     name: "广告：跳过游戏",
                     desc: "①点击右上角②点击不感兴趣",
-                    actionDelay: 300,
                     activityIds: ["com.dragon.read.component.shortvideo.impl.ShortSeriesActivity"],
                     rules: [
                         {
                             name: "①点击右上角",
                             snapshotUrls: ["https://i.gkd.li/snapshot/1783580713445"],
+                            actionDelay: 500,
                             matches: [
                                 'FrameLayout[id="com.phoenix.read:id/awl"] >5  ViewGroup[width=60][height=60]',
                             ],
@@ -491,6 +491,7 @@
                             name: "②点击不感兴趣",
                             snapshotUrls: ["https://i.gkd.li/snapshot/1783582339999"],
                             preKeys: [1],
+                            actionDelay: 200,
                             matches: [
                                 'TextView[id="com.phoenix.read:id/jd6"][text="不喜欢该游戏"]',
                             ],
@@ -501,12 +502,12 @@
                     key: 2,
                     name: "广告：跳过直播推荐",
                     desc: "①点击右上角②点击重复",
-                    actionDelay: 300,
                     activityIds: ["com.dragon.read.component.shortvideo.impl.ShortSeriesActivity"],
                     rules: [
                         {
                             name: "①点击右上角",
                             snapshotUrls: ["https://i.gkd.li/snapshot/1783835572706"],
+                            actionDelay: 500,
                             matches: [
                                 'FrameLayout[id="com.phoenix.read:id/awl"] >3 ViewGroup[width=158][height=157]',
                             ],
@@ -515,6 +516,7 @@
                             name: "②点击重复",
                             snapshotUrls: ["https://i.gkd.li/i/29935121"],
                             preKeys: [1],
+                            actionDelay: 200,
                             matches: ['TextView[text="减少重复出现"]'],
                         },
                     ],
