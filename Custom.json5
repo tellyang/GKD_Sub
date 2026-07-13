@@ -480,6 +480,7 @@
                     activityIds: ["com.dragon.read.component.shortvideo.impl.ShortSeriesActivity"],
                     rules: [
                         {
+                            key: 1,
                             name: "①点击右上角",
                             snapshotUrls: ["https://i.gkd.li/snapshot/1783580713445"],
                             matchDelay: 500,
@@ -488,6 +489,7 @@
                             ],
                         },
                         {
+                            key: 2,
                             name: "②点击不感兴趣",
                             snapshotUrls: ["https://i.gkd.li/snapshot/1783582339999"],
                             preKeys: [1],
@@ -505,6 +507,7 @@
                     activityIds: ["com.dragon.read.component.shortvideo.impl.ShortSeriesActivity"],
                     rules: [
                         {
+                            key: 1,
                             name: "①点击右上角",
                             snapshotUrls: ["https://i.gkd.li/snapshot/1783835572706"],
                             matchDelay: 500,
@@ -513,6 +516,7 @@
                             ],
                         },
                         {
+                            key: 2,
                             name: "②点击重复",
                             snapshotUrls: ["https://i.gkd.li/i/29935121"],
                             preKeys: [1],
