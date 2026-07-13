@@ -1,7 +1,7 @@
 {
     id: 870826,
     name: "个人规则",
-    version: 15,
+    version: 16,
     author: "❤️",
     checkUpdateUrl: "https://gh-proxy.org/https://raw.githubusercontent.com/tellyang/GKD_Sub/refs/heads/main/Custom.json5",
     categories: [
@@ -456,12 +456,9 @@
                     name: "功能：自动点击签到",
                     fastQuery: true,
                     actionMaximum: 1,
-                    matchTime: 10000,
-                    resetMatch: "app",
-                    actionDelay: 200,
                     snapshotUrls: ["https://i.gkd.li/i/29111734"],
                     activityIds: [".MainActivity"],
-                    rules: 'FrameLayout[vid="cv_confirm"] > TextView[vid="tv_confirm"][text="确定"]',
+                    rules: 'TextView[id="com.max.xiaoheihe:id/tv_title"][text="签到成功!"] +3 * > TextView[vid="tv_confirm"][text="确定"]',
                 },
             ],
         },
@@ -473,8 +470,7 @@
                     key: 1,
                     name: "广告：跳过游戏",
                     desc: "①点击右上角②点击不感兴趣",
-                    matchDelay: 200,
-                    forcedTime: 300,
+                    forcedTime: 200,
                     activityIds: ["com.dragon.read.component.shortvideo.impl.ShortSeriesActivity"],
                     rules: [
                         {
@@ -500,8 +496,7 @@
                     key: 2,
                     name: "广告：跳过直播推荐",
                     desc: "①点击右上角②点击重复",
-                    matchDelay: 200,
-                    forcedTime: 300,
+                    forcedTime: 200,
                     activityIds: ["com.dragon.read.component.shortvideo.impl.ShortSeriesActivity"],
                     rules: [
                         {
