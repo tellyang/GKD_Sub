@@ -472,8 +472,8 @@
                             key: 1,
                             name: "①点击右上角",
                             snapshotUrls: ["https://i.gkd.li/snapshot/1783580713445"],
-                            matchDelay: 100,
-                            forcedTime: 500,
+                            matchDelay: 500,
+                            forcedTime: 800,
                             matches: [
                                 'FrameLayout[id="com.phoenix.read:id/awl"] >5  ViewGroup[width=60][height=60]',
                             ],
