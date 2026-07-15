@@ -466,14 +466,14 @@
                     key: 1,
                     name: "广告：跳过游戏",
                     desc: "①点击右上角②点击不感兴趣",
-                    matchDelay: 300,
-                    forcedTime: 500,
                     activityIds: ["com.dragon.read.component.shortvideo.impl.ShortSeriesActivity"],
                     rules: [
                         {
                             key: 1,
                             name: "①点击右上角",
                             snapshotUrls: ["https://i.gkd.li/snapshot/1783580713445"],
+                            matchDelay: 100,
+                            forcedTime: 500,
                             matches: [
                                 'FrameLayout[id="com.phoenix.read:id/awl"] >5  ViewGroup[width=60][height=60]',
                             ],
@@ -493,14 +493,14 @@
                     key: 2,
                     name: "广告：跳过直播推荐",
                     desc: "①点击右上角②点击重复",
-                    matchDelay: 300,
-                    forcedTime: 500,
                     activityIds: ["com.dragon.read.component.shortvideo.impl.ShortSeriesActivity"],
                     rules: [
                         {
                             key: 1,
                             name: "①点击右上角",
                             snapshotUrls: ["https://i.gkd.li/snapshot/1783835572706"],
+                            matchDelay: 500,
+                            forcedTime: 800,
                             matches: [
                                 'FrameLayout[id="com.phoenix.read:id/awl"] >3 ViewGroup[width=158][height=157]',
                             ],
