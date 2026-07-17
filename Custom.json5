@@ -1,7 +1,7 @@
 {
     id: 870826,
     name: "个人规则",
-    version: 18,
+    version: 19,
     author: "❤️",
     checkUpdateUrl: "https://gh-proxy.org/https://raw.githubusercontent.com/tellyang/GKD_Sub/refs/heads/main/Custom.json5",
     categories: [
@@ -512,6 +512,17 @@
                             preKeys: [1],
                             matches: ['TextView[text="减少重复出现"]'],
                         },
+                    ],
+                },
+                {
+                    key: 3,
+                    name: "广告：关闭游戏小程序",
+                    activityIds: ["com.minigame.merge.miniapphost.placeholder.MiniGameActivity1"],
+                    snapshotUrls: ["https://i.gkd.li/i/30113511"],
+                    matchDelay: 1000,
+                    forcedTime: 1200,
+                    matches: [
+                        'ImageView[id="com.phoenix.read.appbrand:id/bdpapp_m_titlebar_capsule_back"][desc="关闭"]',
                     ],
                 },
             ],
