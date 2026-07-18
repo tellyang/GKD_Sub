@@ -1,7 +1,7 @@
 {
     id: 870826,
     name: "个人规则",
-    version: 19,
+    version: 20,
     author: "❤️",
     checkUpdateUrl: "https://gh-proxy.org/https://raw.githubusercontent.com/tellyang/GKD_Sub/refs/heads/main/Custom.json5",
     categories: [
@@ -247,7 +247,7 @@
                     name: "关闭外卖下单后弹窗",
                     fastQuery: true,
                     actionMaximum: 1,
-                    matchTime: 10000,
+                    forcedTime: 200,
                     snapshotUrls: ["https://i.gkd.li/i/28865925"],
                     activityIds: ["com.taobao.themis.container.app.TMSActivity"],
                     rules: [
@@ -268,7 +268,7 @@
                     fastQuery: true,
                     actionMaximum: 1,
                     actionDelay: 500,
-                    matchTime: 10000,
+                    forcedTime: 700,
                     snapshotUrls: ["https://i.gkd.li/i/28914842"],
                     activityIds: [
                         "com.alibaba.android.ultron.vfw.weex2.highPerformance.widget.UltronTradeHybridActivity",
@@ -451,7 +451,7 @@
                     key: 1,
                     name: "功能：自动点击签到",
                     fastQuery: true,
-                    actionMaximum: 1,
+                    matchTime: 10000,
                     snapshotUrls: ["https://i.gkd.li/i/29111734"],
                     activityIds: [".MainActivity"],
                     rules: 'TextView[id="com.max.xiaoheihe:id/tv_title"][text="签到成功!"] +3 * > TextView[vid="tv_confirm"][text="确定"]',
@@ -517,10 +517,16 @@
                 {
                     key: 3,
                     name: "广告：关闭游戏小程序",
-                    activityIds: ["com.minigame.merge.miniapphost.placeholder.MiniGameActivity1"],
+                    activityIds: [
+                        "com.minigame.merge.miniapphost.placeholder.MiniGameActivity0",
+                        "com.minigame.merge.miniapphost.placeholder.MiniGameActivity1",
+                        "com.minigame.merge.miniapphost.placeholder.MiniGameActivity2",
+                        "com.minigame.merge.miniapphost.placeholder.MiniGameActivity3",
+                        "com.minigame.merge.miniapphost.placeholder.MiniGameActivity4",
+                    ],
                     snapshotUrls: ["https://i.gkd.li/i/30113511"],
-                    matchDelay: 1000,
-                    forcedTime: 1200,
+                    matchDelay: 500,
+                    forcedTime: 800,
                     matches: [
                         'ImageView[id="com.phoenix.read.appbrand:id/bdpapp_m_titlebar_capsule_back"][desc="关闭"]',
                     ],
