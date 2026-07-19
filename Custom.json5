@@ -1,7 +1,7 @@
 {
     id: 870826,
     name: "个人规则",
-    version: 20,
+    version: 21,
     author: "❤️",
     checkUpdateUrl: "https://gh-proxy.org/https://raw.githubusercontent.com/tellyang/GKD_Sub/refs/heads/main/Custom.json5",
     categories: [
