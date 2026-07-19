@@ -527,8 +527,12 @@
                     snapshotUrls: ["https://i.gkd.li/i/30113511"],
                     matchDelay: 500,
                     forcedTime: 800,
-                    matches: [
-                        'ImageView[id="com.phoenix.read.appbrand:id/bdpapp_m_titlebar_capsule_back"][desc="关闭"]',
+                    rules: [
+                        {
+                            matches: [
+                                'ImageView[id="com.phoenix.read.appbrand:id/bdpapp_m_titlebar_capsule_back"][desc="关闭"]',
+                            ],
+                        },
                     ],
                 },
             ],
