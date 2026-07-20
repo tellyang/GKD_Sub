@@ -1,7 +1,7 @@
 {
     id: 870826,
     name: "个人规则",
-    version: 22,
+    version: 23,
     author: "❤️",
     checkUpdateUrl: "https://gh-proxy.org/https://raw.githubusercontent.com/tellyang/GKD_Sub/refs/heads/main/Custom.json5",
     categories: [
@@ -531,6 +531,21 @@
                         {
                             matches: [
                                 'ImageView[id="com.phoenix.read.appbrand:id/bdpapp_m_titlebar_capsule_back"][desc="关闭"]',
+                            ],
+                        },
+                    ],
+                },
+                {
+                    key: 4,
+                    name: "广告：关闭热门短剧推荐弹窗",
+                    activityIds: ["com.dragon.read.pages.main.MainFragmentActivity"],
+                    snapshotUrls: ["https://i.gkd.li/snapshot/1784538658628"],
+                    matchDelay: 500,
+                    forcedTime: 800,
+                    rules: [
+                        {
+                            matches: [
+                                'ImageView[id="com.phoenix.read:id/f"][width=100][height=100]',
                             ],
                         },
                     ],
