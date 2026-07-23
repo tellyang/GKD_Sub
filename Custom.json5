@@ -1,7 +1,7 @@
 {
     id: 870826,
     name: "个人规则",
-    version: 23,
+    version: 24,
     author: "❤️",
     checkUpdateUrl: "https://gh-proxy.org/https://raw.githubusercontent.com/tellyang/GKD_Sub/refs/heads/main/Custom.json5",
     categories: [
@@ -498,11 +498,15 @@
                         {
                             key: 1,
                             name: "①点击右上角",
-                            snapshotUrls: ["https://i.gkd.li/snapshot/1783835572706"],
+                            snapshotUrls: [
+                                "https://i.gkd.li/snapshot/1783835572706",
+                                "https://i.gkd.li/snapshot/1784788146364",
+                            ],
                             matchDelay: 500,
                             forcedTime: 800,
                             matches: [
                                 'FrameLayout[id="com.phoenix.read:id/awl"] >3 ViewGroup[width=158][height=157]',
+                                'FrameLayout[id="com.phoenix.read:id/ax2"] >3 ViewGroup[width=158][height=157]',
                             ],
                         },
                         {
