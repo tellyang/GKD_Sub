@@ -498,7 +498,7 @@
                         {
                             key: 1,
                             name: "①点击右上角",
-                            matches: [
+                            anyMatches: [
                                 'FrameLayout[vid="awl"] >3 ViewGroup[width=158][height=157]',
                                 'FrameLayout[vid="ax2"] >3 ViewGroup[width=158][height=157]',
                                 'FrameLayout[vid="ax2"] >3 ViewGroup[width=98][height=98]',
