@@ -1,7 +1,7 @@
 {
     id: 870826,
     name: "个人规则",
-    version: 25,
+    version: 26,
     author: "❤️",
     checkUpdateUrl: "https://gh-proxy.org/https://raw.githubusercontent.com/tellyang/GKD_Sub/refs/heads/main/Custom.json5",
     categories: [
@@ -506,6 +506,7 @@
                             forcedTime: 800,
                             matches: [
                                 "ViewGroup[left=2297][top=146][right=2455][bottom=303][width=158][height=157]",
+                                "ViewGroup[left=1436][top=121][right=1534][bottom=219][width=98][height=98]",
                             ],
                         },
                         {
