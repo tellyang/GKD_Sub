@@ -1,7 +1,7 @@
 {
     id: 870826,
     name: "个人规则",
-    version: 31,
+    version: 32,
     author: "❤️",
     checkUpdateUrl: "https://gh-proxy.org/https://raw.githubusercontent.com/tellyang/GKD_Sub/refs/heads/main/Custom.json5",
     categories: [
@@ -474,19 +474,21 @@
                             snapshotUrls: [
                                 "https://i.gkd.li/snapshot/1783580713445",
                                 "https://i.gkd.li/snapshot/1785427774149",
+                                "https://i.gkd.li/snapshot/1785477943224",
+                                "https://i.gkd.li/snapshot/1785477442594",
                             ],
                             matchDelay: 500,
                             forcedTime: 800,
-                            matches: ["ViewGroup[width=60][height=60]"],
+                            matches: [
+                                'FrameLayout[id^="com.phoenix.read:id/a"] >5 ViewGroup[width=60][height=60]',
+                            ],
                         },
                         {
                             key: 2,
                             name: "②点击不感兴趣",
                             snapshotUrls: ["https://i.gkd.li/snapshot/1783582339999"],
                             preKeys: [1],
-                            matches: [
-                                'TextView[id="com.phoenix.read:id/jd6"][text="不喜欢该游戏"]',
-                            ],
+                            matches: ['TextView[text="不喜欢该游戏"]'],
                         },
                     ],
                 },
@@ -500,8 +502,8 @@
                             key: 1,
                             name: "①点击右上角",
                             anyMatches: [
-                                "ViewGroup[width=158][height=157]",
-                                "ViewGroup[width=98][height=98]",
+                                'FrameLayout[id^="com.phoenix.read:id/a"] >3 ViewGroup[width=158][height=157]',
+                                'FrameLayout[id^="com.phoenix.read:id/a"] >3 ViewGroup[width=98][height=98]',
                             ],
                             forcedTime: 800,
                             matchDelay: 500,
