@@ -1,7 +1,7 @@
 {
     id: 870826,
     name: "个人规则",
-    version: 33,
+    version: 34,
     author: "❤️",
     checkUpdateUrl: "https://gh-proxy.org/https://raw.githubusercontent.com/tellyang/GKD_Sub/refs/heads/main/Custom.json5",
     categories: [
@@ -478,7 +478,7 @@
                                 "https://i.gkd.li/snapshot/1784788146364",
                                 "https://i.gkd.li/snapshot/1784949581696",
                             ],
-                            forcedTime: 200,
+                            actionDelay: 200,
                             swipeArg: {
                                 start: {
                                     x: "screenWidth/2",
