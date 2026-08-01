@@ -1,7 +1,7 @@
 {
     id: 870826,
     name: "个人规则",
-    version: 32,
+    version: 33,
     author: "❤️",
     checkUpdateUrl: "https://gh-proxy.org/https://raw.githubusercontent.com/tellyang/GKD_Sub/refs/heads/main/Custom.json5",
     categories: [
@@ -464,66 +464,43 @@
             groups: [
                 {
                     key: 1,
-                    name: "广告：跳过游戏",
-                    desc: "①点击右上角②点击不感兴趣",
+                    name: "广告：1、跳过游戏，2、跳过直播推荐",
+                    desc: "1、游戏滑动跳过，2、跳过直播推荐",
                     activityIds: ["com.dragon.read.component.shortvideo.impl.ShortSeriesActivity"],
                     rules: [
                         {
-                            key: 1,
-                            name: "①点击右上角",
                             snapshotUrls: [
                                 "https://i.gkd.li/snapshot/1783580713445",
                                 "https://i.gkd.li/snapshot/1785427774149",
                                 "https://i.gkd.li/snapshot/1785477943224",
                                 "https://i.gkd.li/snapshot/1785477442594",
+                                "https://i.gkd.li/snapshot/1783835572706",
+                                "https://i.gkd.li/snapshot/1784788146364",
+                                "https://i.gkd.li/snapshot/1784949581696",
                             ],
-                            matchDelay: 500,
-                            forcedTime: 800,
-                            matches: [
+                            forcedTime: 200,
+                            swipeArg: {
+                                start: {
+                                    x: "screenWidth/2",
+                                    y: "screenHeight * 0.6",
+                                },
+                                end: {
+                                    x: "screenWidth/2",
+                                    y: "screenHeight * 0.3",
+                                },
+                                duration: 200,
+                            },
+                            anyMatches: [
                                 'FrameLayout[id^="com.phoenix.read:id/a"] >5 ViewGroup[width=60][height=60]',
+                                'FrameLayout[id^="com.phoenix.read:id/a"] >3 ImageView[width=40][height=40]',
+                                'FrameLayout[id^="com.phoenix.read:id/a"] >3 ViewGroup[width=158][height=157]',
+                                'FrameLayout[id^="com.phoenix.read:id/a"] >3 ViewGroup[width=98][height=98]',
                             ],
-                        },
-                        {
-                            key: 2,
-                            name: "②点击不感兴趣",
-                            snapshotUrls: ["https://i.gkd.li/snapshot/1783582339999"],
-                            preKeys: [1],
-                            matches: ['TextView[text="不喜欢该游戏"]'],
                         },
                     ],
                 },
                 {
                     key: 2,
-                    name: "广告：跳过直播推荐",
-                    desc: "①点击右上角②点击重复",
-                    activityIds: ["com.dragon.read.component.shortvideo.impl.ShortSeriesActivity"],
-                    rules: [
-                        {
-                            key: 1,
-                            name: "①点击右上角",
-                            anyMatches: [
-                                'FrameLayout[id^="com.phoenix.read:id/a"] >3 ViewGroup[width=158][height=157]',
-                                'FrameLayout[id^="com.phoenix.read:id/a"] >3 ViewGroup[width=98][height=98]',
-                            ],
-                            forcedTime: 800,
-                            matchDelay: 500,
-                            snapshotUrls: [
-                                "https://i.gkd.li/snapshot/1783835572706",
-                                "https://i.gkd.li/snapshot/1784788146364",
-                                "https://i.gkd.li/snapshot/1784949581696",
-                            ],
-                        },
-                        {
-                            key: 2,
-                            name: "②点击重复",
-                            snapshotUrls: ["https://i.gkd.li/i/29935121"],
-                            preKeys: [1],
-                            matches: ['TextView[text="减少重复出现"]'],
-                        },
-                    ],
-                },
-                {
-                    key: 3,
                     name: "广告：关闭游戏小程序",
                     activityIds: [
                         "com.minigame.merge.miniapphost.placeholder.MiniGameActivity0",
@@ -544,7 +521,7 @@
                     ],
                 },
                 {
-                    key: 4,
+                    key: 3,
                     name: "广告：关闭热门短剧推荐弹窗",
                     activityIds: ["com.dragon.read.pages.main.MainFragmentActivity"],
                     snapshotUrls: ["https://i.gkd.li/snapshot/1784538658628"],
