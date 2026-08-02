@@ -491,7 +491,10 @@
                         {
                             key: 2,
                             name: "②点击不感兴趣 或 重复",
-                            snapshotUrls: ["https://i.gkd.li/snapshot/1783582339999"],
+                            snapshotUrls: [
+                                "https://i.gkd.li/snapshot/1783582339999",
+                                "https://i.gkd.li/i/29935121",
+                            ],
                             preKeys: [1],
                             matches: ['TextView[text="不喜欢该游戏" || text="减少重复出现"]'],
                         },
