@@ -1,7 +1,7 @@
 {
     id: 870826,
     name: "个人规则",
-    version: 39,
+    version: 40,
     author: "❤️",
     checkUpdateUrl: "https://gh-proxy.org/https://raw.githubusercontent.com/tellyang/GKD_Sub/refs/heads/main/Custom.json5",
     categories: [
@@ -464,11 +464,13 @@
             groups: [
                 {
                     key: 1,
-                    name: "广告：1、跳过游戏，2、跳过直播推荐",
-                    desc: "1、游戏滑动跳过，2、跳过直播推荐",
+                    name: "广告：跳过游戏或直播",
+                    desc: "①点击右上角②点击不感兴趣或重复",
                     activityIds: ["com.dragon.read.component.shortvideo.impl.ShortSeriesActivity"],
                     rules: [
                         {
+                            key: 1,
+                            name: "①点击右上角",
                             snapshotUrls: [
                                 "https://i.gkd.li/snapshot/1783580713445",
                                 "https://i.gkd.li/snapshot/1785427774149",
@@ -478,23 +480,20 @@
                                 "https://i.gkd.li/snapshot/1784788146364",
                                 "https://i.gkd.li/snapshot/1784949581696",
                             ],
-                            matchDelay: 1000,
-                            actionCd: 2000,
-                            swipeArg: {
-                                start: {
-                                    x: "screenWidth/2",
-                                    y: "screenHeight * 0.6",
-                                },
-                                end: {
-                                    x: "screenWidth/2",
-                                    y: "screenHeight * 0.3",
-                                },
-                                duration: 200,
-                            },
+                            matchDelay: 500,
+                            forcedTime: 800,
                             anyMatches: [
-                                'FrameLayout[id^="com.phoenix.read:id/a"] >3 ImageView[width=40][height=40]',
-                                'FrameLayout[id^="com.phoenix.read:id/a"] >3 ImageView[width=66][height=74]',
+                                'FrameLayout[id^="com.phoenix.read:id/a"] >5 ViewGroup[width=60][height=60]',
+                                'FrameLayout[id^="com.phoenix.read:id/a"] >3 ViewGroup[width=158][height=157]',
+                                'FrameLayout[id^="com.phoenix.read:id/a"] >3 ViewGroup[width=98][height=98]',
                             ],
+                        },
+                        {
+                            key: 2,
+                            name: "②点击不感兴趣 或 重复",
+                            snapshotUrls: ["https://i.gkd.li/snapshot/1783582339999"],
+                            preKeys: [1],
+                            matches: ['TextView[text="不喜欢该游戏" || text="减少重复出现"]'],
                         },
                     ],
                 },
