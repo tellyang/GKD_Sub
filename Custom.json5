@@ -1,7 +1,7 @@
 {
     id: 870826,
     name: "个人规则",
-    version: 40,
+    version: 41,
     author: "❤️",
     checkUpdateUrl: "https://gh-proxy.org/https://raw.githubusercontent.com/tellyang/GKD_Sub/refs/heads/main/Custom.json5",
     categories: [
@@ -480,8 +480,9 @@
                                 "https://i.gkd.li/snapshot/1784788146364",
                                 "https://i.gkd.li/snapshot/1784949581696",
                             ],
-                            matchDelay: 500,
+                            matchDelay: 800,
                             forcedTime: 800,
+                            actionCd: 2000,
                             anyMatches: [
                                 'FrameLayout[id^="com.phoenix.read:id/a"] >5 ViewGroup[width=60][height=60]',
                                 'FrameLayout[id^="com.phoenix.read:id/a"] >3 ViewGroup[width=158][height=157]',
@@ -509,8 +510,16 @@
                         "com.minigame.merge.miniapphost.placeholder.MiniGameActivity2",
                         "com.minigame.merge.miniapphost.placeholder.MiniGameActivity3",
                         "com.minigame.merge.miniapphost.placeholder.MiniGameActivity4",
+                        "com.minigame.merge.miniapphost.placeholder.MiniGameTransparentInHostStackActivity0",
+                        "com.minigame.merge.miniapphost.placeholder.MiniGameTransparentInHostStackActivity1",
+                        "com.minigame.merge.miniapphost.placeholder.MiniGameTransparentInHostStackActivity2",
+                        "com.minigame.merge.miniapphost.placeholder.MiniGameTransparentInHostStackActivity3",
+                        "com.minigame.merge.miniapphost.placeholder.MiniGameTransparentInHostStackActivity4",
                     ],
-                    snapshotUrls: ["https://i.gkd.li/i/30113511"],
+                    snapshotUrls: [
+                        "https://i.gkd.li/i/30113511",
+                        "https://i.gkd.li/snapshot/1785774868922",
+                    ],
                     matchDelay: 500,
                     forcedTime: 800,
                     rules: [
