@@ -1,7 +1,7 @@
 {
     id: 870826,
     name: "个人规则",
-    version: 43,
+    version: 44,
     author: "❤️",
     checkUpdateUrl: "https://gh-proxy.org/https://raw.githubusercontent.com/tellyang/GKD_Sub/refs/heads/main/Custom.json5",
     categories: [
@@ -480,7 +480,7 @@
                                 "https://i.gkd.li/snapshot/1784788146364",
                                 "https://i.gkd.li/snapshot/1784949581696",
                             ],
-                            matchDelay: 1500,
+                            actionDelay: 1500,
                             actionCd: 2000,
                             anyMatches: [
                                 'FrameLayout[id^="com.phoenix.read:id/a"] >5 ViewGroup[width=60][height=60]',
@@ -519,7 +519,7 @@
                         "https://i.gkd.li/i/30113511",
                         "https://i.gkd.li/snapshot/1785774868922",
                     ],
-                    matchDelay: 1500,
+                    actionDelay: 1500,
                     rules: [
                         {
                             matches: [
@@ -533,7 +533,7 @@
                     name: "广告：关闭热门短剧推荐弹窗",
                     activityIds: ["com.dragon.read.pages.main.MainFragmentActivity"],
                     snapshotUrls: ["https://i.gkd.li/snapshot/1784538658628"],
-                    matchDelay: 1500,
+                    actionDelay: 1500,
                     rules: [
                         {
                             matches: [
