@@ -1,7 +1,7 @@
 {
     id: 870826,
     name: "个人规则",
-    version: 48,
+    version: 49,
     author: "❤️",
     checkUpdateUrl: "https://gh-proxy.org/https://raw.githubusercontent.com/tellyang/GKD_Sub/refs/heads/main/Custom.json5",
     categories: [
@@ -480,7 +480,7 @@
                                 "https://i.gkd.li/snapshot/1784788146364",
                                 "https://i.gkd.li/snapshot/1784949581696",
                             ],
-                            actionDelay: 500,
+                            actionDelay: 850,
                             resetMatch: "match",
                             anyMatches: [
                                 'FrameLayout[id^="com.phoenix.read:id/a"] >5 ViewGroup[width=60][height=60]',
