@@ -1,4 +1,25 @@
 {
-    id: 870826,
-    version: 1,
+    id: "com.phoenix.read",
+    name: "红果免费短剧",
+    groups: [
+        {
+            key: 1,
+            name: "广告：跳过游戏或直播",
+            desc: "①点击右上角②点击不感兴趣或重复",
+            activityIds: ["com.dragon.read.component.shortvideo.impl.ShortSeriesActivity"],
+            rules: [
+                {
+                    key: 1,
+                    name: "①点击右上角",
+                    matchDelay: 2500,
+                    actionCd: 1000,
+                    anyMatches: [
+                        'FrameLayout[id^="com.phoenix.read:id/a"] >5 ViewGroup[width=60][height=60]',
+                        'FrameLayout[id^="com.phoenix.read:id/a"] >3 ViewGroup[width=158][height=157]',
+                        'FrameLayout[id^="com.phoenix.read:id/a"] >3 ViewGroup[width=98][height=98]',
+                    ],
+                },
+            ],
+        },
+    ],
 }
