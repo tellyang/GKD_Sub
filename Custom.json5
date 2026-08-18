@@ -1,7 +1,7 @@
 {
     id: 870826,
     name: "个人规则",
-    version: 56,
+    version: 57,
     author: "❤️",
     checkUpdateUrl: "https://gh-proxy.org/https://raw.githubusercontent.com/tellyang/GKD_Sub/refs/heads/main/Custom.json5",
     categories: [
@@ -480,8 +480,19 @@
                                 "https://i.gkd.li/snapshot/1784788146364",
                                 "https://i.gkd.li/snapshot/1784949581696",
                             ],
-                            actionDelay: 1200,
+                            actionDelay: 800,
                             resetMatch: "match",
+                            swipeArg: {
+                                start: {
+                                    x: "screenWidth/2",
+                                    y: "screenHeight * 0.6",
+                                },
+                                end: {
+                                    x: "screenWidth/2",
+                                    y: "screenHeight * 0.3",
+                                },
+                                duration: 200,
+                            },
                             anyMatches: [
                                 'FrameLayout[id^="com.phoenix.read:id/a"] >5 ViewGroup[width=60][height=60]',
                                 'FrameLayout[id^="com.phoenix.read:id/a"] >3 ViewGroup[width=158][height=157]',
@@ -538,7 +549,7 @@
                             name: "②点击定时关闭",
                             snapshotUrls: ["https://i.gkd.li/snapshot/1787024300404"],
                             preKeys: [2],
-                            actionDelay: 1000,
+                            actionDelay: 800,
                             matches: ['TextView[text="定时关闭"]'],
                         },
                         {
