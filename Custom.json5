@@ -520,6 +520,17 @@
                             name: "②点击定时关闭",
                             snapshotUrls: ["https://i.gkd.li/snapshot/1787024300404"],
                             preKeys: [1],
+                            swipeArg: {
+                                start: {
+                                    x: "screenWidth/2",
+                                    y: "screenHeight * 0.5",
+                                },
+                                end: {
+                                    x: "screenWidth/2",
+                                    y: "screenHeight * 0.1",
+                                },
+                                duration: 200,
+                            },
                             matches: ['TextView[text="定时关闭"]'],
                         },
                         {
