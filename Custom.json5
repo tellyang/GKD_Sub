@@ -1,7 +1,7 @@
 {
     id: 870826,
     name: "个人规则",
-    version: 54,
+    version: 55,
     author: "❤️",
     checkUpdateUrl: "https://gh-proxy.org/https://raw.githubusercontent.com/tellyang/GKD_Sub/refs/heads/main/Custom.json5",
     categories: [
@@ -538,7 +538,7 @@
                             name: "②点击定时关闭",
                             snapshotUrls: ["https://i.gkd.li/snapshot/1787024300404"],
                             preKeys: [2],
-                            matchDelay: 500,
+                            actionDelay: 1200,
                             matches: ['TextView[text="定时关闭"]'],
                         },
                         {
