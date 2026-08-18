@@ -512,6 +512,7 @@
                             snapshotUrls: ["https://i.gkd.li/snapshot/1787024279732"],
                             actionDelay: 1200,
                             resetMatch: "match",
+                            actionMaximum: 1,
                             matches: ['TextView[text="第2集"] +2 ImageView[width=72][height=72]'],
                         },
                         {
