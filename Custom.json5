@@ -1,7 +1,7 @@
 {
     id: 870826,
     name: "个人规则",
-    version: 58,
+    version: 59,
     author: "❤️",
     checkUpdateUrl: "https://gh-proxy.org/https://raw.githubusercontent.com/tellyang/GKD_Sub/refs/heads/main/Custom.json5",
     categories: [
@@ -497,7 +497,7 @@
                                 'FrameLayout[id^="com.phoenix.read:id/a"] >5 ViewGroup[width=60][height=60]',
                                 'FrameLayout[id^="com.phoenix.read:id/a"] >3 ViewGroup[width=158][height=157]',
                                 'FrameLayout[id^="com.phoenix.read:id/a"] >3 ViewGroup[width=98][height=98]',
-                                "ImageView[width=40][height=40]",
+                                "ImageView[id=null][width=40][height=40]",
                             ],
                         },
                         {
