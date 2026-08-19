@@ -1,7 +1,7 @@
 {
     id: 870826,
     name: "个人规则",
-    version: 57,
+    version: 58,
     author: "❤️",
     checkUpdateUrl: "https://gh-proxy.org/https://raw.githubusercontent.com/tellyang/GKD_Sub/refs/heads/main/Custom.json5",
     categories: [
@@ -480,12 +480,12 @@
                                 "https://i.gkd.li/snapshot/1784788146364",
                                 "https://i.gkd.li/snapshot/1784949581696",
                             ],
-                            actionDelay: 800,
+                            actionDelay: 1000,
                             resetMatch: "match",
                             swipeArg: {
                                 start: {
                                     x: "screenWidth/2",
-                                    y: "screenHeight * 0.6",
+                                    y: "screenHeight * 0.7",
                                 },
                                 end: {
                                     x: "screenWidth/2",
@@ -497,6 +497,7 @@
                                 'FrameLayout[id^="com.phoenix.read:id/a"] >5 ViewGroup[width=60][height=60]',
                                 'FrameLayout[id^="com.phoenix.read:id/a"] >3 ViewGroup[width=158][height=157]',
                                 'FrameLayout[id^="com.phoenix.read:id/a"] >3 ViewGroup[width=98][height=98]',
+                                "ImageView[width=40][height=40]",
                             ],
                         },
                         {
