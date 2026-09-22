@@ -1,7 +1,7 @@
 {
     id: 870826,
     name: "个人规则",
-    version: 61,
+    version: 62,
     author: "❤️",
     checkUpdateUrl: "https://gh-proxy.org/https://raw.githubusercontent.com/tellyang/GKD_Sub/refs/heads/main/Custom.json5",
     categories: [
@@ -479,6 +479,7 @@
                                 "https://i.gkd.li/snapshot/1783835572706",
                                 "https://i.gkd.li/snapshot/1784788146364",
                                 "https://i.gkd.li/snapshot/1784949581696",
+                                "https://i.gkd.li/snapshot/1790072625590",
                             ],
                             actionDelay: 1000,
                             resetMatch: "match",
@@ -498,6 +499,7 @@
                                 "ImageView[id=null][width=105][height=118]",
                                 "ImageView[id=null][width=66][height=74]",
                                 "ImageView[id=null][width=40][height=40]",
+                                "ImageView[id=null][width=772][height=762]",
                             ],
                         },
                         {
