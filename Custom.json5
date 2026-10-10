@@ -1,7 +1,7 @@
 {
     id: 870826,
     name: "个人规则",
-    version: 62,
+    version: 63,
     author: "❤️",
     checkUpdateUrl: "https://gh-proxy.org/https://raw.githubusercontent.com/tellyang/GKD_Sub/refs/heads/main/Custom.json5",
     categories: [
@@ -481,9 +481,9 @@
                                 "https://i.gkd.li/snapshot/1784949581696",
                                 "https://i.gkd.li/snapshot/1790072625590",
                             ],
-                            actionDelay: 1000,
-                            resetMatch: "match",
-                            actionCd: 1000,
+                            actionDelay: 500,
+                            resetMatch: "activity",
+                            actionCd: 500,
                             swipeArg: {
                                 start: {
                                     x: "screenWidth/2",
@@ -493,7 +493,7 @@
                                     x: "screenWidth/2",
                                     y: "screenHeight * 0.3",
                                 },
-                                duration: 300,
+                                duration: 250,
                             },
                             anyMatches: [
                                 "ImageView[id=null][width=105][height=118]",
