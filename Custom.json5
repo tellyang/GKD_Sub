@@ -1,7 +1,7 @@
 {
     id: 870826,
     name: "个人规则",
-    version: 65,
+    version: 66,
     author: "❤️",
     checkUpdateUrl: "https://gh-proxy.org/https://raw.githubusercontent.com/tellyang/GKD_Sub/refs/heads/main/Custom.json5",
     categories: [
@@ -499,7 +499,7 @@
                                 "ImageView[id=null][width=105][height=118]",
                                 "ImageView[id=null][width=66][height=74]",
                                 "ImageView[id=null][width=40][height=40]",
-                                "ImageView[id=null][width=40][height=45]",
+                                "ImageView[id=null][width=72][height=72]",
                                 "ImageView[id=null][width=772][height=762]",
                             ],
                         },
