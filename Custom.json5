@@ -1,7 +1,7 @@
 {
     id: 870826,
     name: "个人规则",
-    version: 68,
+    version: 69,
     author: "❤️",
     checkUpdateUrl: "https://gh-proxy.org/https://raw.githubusercontent.com/tellyang/GKD_Sub/refs/heads/main/Custom.json5",
     categories: [
@@ -482,9 +482,7 @@
                                 "https://i.gkd.li/snapshot/1790072625590",
                                 "https://i.gkd.li/snapshot/1791824208841",
                             ],
-                            matchDelay: 500,
-                            resetMatch: "activity",
-                            forcedTime: 600,
+                            actionCd: 500,
                             swipeArg: {
                                 start: {
                                     x: "screenWidth/2",
@@ -496,12 +494,8 @@
                                 },
                                 duration: 250,
                             },
-                            anyMatches: [
-                                "ImageView[id=null][desc=null][width=105][height=118]",
-                                "ImageView[id=null][desc=null][width=66][height=74]",
-                                "ImageView[id=null][desc=null][width=40][height=40 || height=45]",
-                                "ImageView[id=null][desc=null][width=772][height=762]",
-                            ],
+                            excludeMatches: ['TextView[text="选集"][visibleToUser=true]'],
+                            matches: ['TextView[text="选集"][visibleToUser=false]'],
                         },
                         {
                             key: 2,
@@ -525,7 +519,7 @@
                             key: 1,
                             name: "①点击右上角",
                             snapshotUrls: ["https://i.gkd.li/snapshot/1787024279732"],
-                            actionDelay: 1200,
+                            actionDelay: 1000,
                             resetMatch: "match",
                             actionMaximum: 1,
                             matches: ['TextView[text="第2集"] +2 ImageView[width=72][height=72]'],
