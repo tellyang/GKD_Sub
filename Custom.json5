@@ -1,7 +1,7 @@
 {
     id: 870826,
     name: "个人规则",
-    version: 73,
+    version: 74,
     author: "❤️",
     checkUpdateUrl: "https://gh-proxy.org/https://raw.githubusercontent.com/tellyang/GKD_Sub/refs/heads/main/Custom.json5",
     categories: [
@@ -527,7 +527,7 @@
                         },
                         {
                             key: 2,
-                            name: "②滑动到定时关闭",
+                            name: "②向上滑动显示定时关闭",
                             snapshotUrls: [
                                 "https://i.gkd.li/snapshot/1787024300404",
                                 "https://i.gkd.li/snapshot/1793755596254",
@@ -548,7 +548,7 @@
                         },
                         {
                             key: 3,
-                            name: "②点击定时关闭",
+                            name: "③点击定时关闭",
                             snapshotUrls: ["https://i.gkd.li/snapshot/1787024300404"],
                             preKeys: [2],
                             actionDelay: 500,
@@ -556,10 +556,24 @@
                         },
                         {
                             key: 4,
-                            name: "③点击播完本剧",
-                            snapshotUrls: ["https://i.gkd.li/snapshot/1787024312504"],
+                            name: "④点击播完本剧",
+                            snapshotUrls: [
+                                "https://i.gkd.li/snapshot/1787024312504",
+                                "https://i.gkd.li/snapshot/1793757332103",
+                            ],
                             preKeys: [3],
+                            excludeMatches: ['TextView[text="播完本剧"] + ImageView'],
                             matches: ['TextView[text="播完本剧"]'],
+                        },
+                        {
+                            key: 5,
+                            name: "⑤播完本剧选中时退出",
+                            snapshotUrls: [
+                                "https://i.gkd.li/snapshot/1787024312504",
+                                "https://i.gkd.li/snapshot/1793757332103",
+                            ],
+                            preKeys: [4],
+                            matches: ['@ImageView + TextView[text="定时关闭"]'],
                         },
                     ],
                 },
