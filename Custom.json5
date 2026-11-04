@@ -1,7 +1,7 @@
 {
     id: 870826,
     name: "个人规则",
-    version: 71,
+    version: 72,
     author: "❤️",
     checkUpdateUrl: "https://gh-proxy.org/https://raw.githubusercontent.com/tellyang/GKD_Sub/refs/heads/main/Custom.json5",
     categories: [
@@ -528,12 +528,15 @@
                         {
                             key: 2,
                             name: "②滑动到定时关闭",
-                            snapshotUrls: ["https://i.gkd.li/snapshot/1787024300404"],
+                            snapshotUrls: [
+                                "https://i.gkd.li/snapshot/1787024300404",
+                                "https://i.gkd.li/snapshot/1793755596254",
+                            ],
                             preKeys: [1],
                             swipeArg: {
                                 start: {
                                     x: "screenWidth/2",
-                                    y: "screenHeight * 0.5",
+                                    y: "screenHeight/2",
                                 },
                                 end: {
                                     x: "screenWidth/2",
@@ -541,7 +544,7 @@
                                 },
                                 duration: 200,
                             },
-                            matches: ['TextView[text="当前倍速"]'],
+                            matches: ['TextView[text="不感兴趣"]'],
                         },
                         {
                             key: 3,
