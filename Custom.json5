@@ -1,7 +1,7 @@
 {
     id: 870826,
     name: "个人规则",
-    version: 72,
+    version: 73,
     author: "❤️",
     checkUpdateUrl: "https://gh-proxy.org/https://raw.githubusercontent.com/tellyang/GKD_Sub/refs/heads/main/Custom.json5",
     categories: [
@@ -536,7 +536,7 @@
                             swipeArg: {
                                 start: {
                                     x: "screenWidth/2",
-                                    y: "screenHeight/2",
+                                    y: "screenHeight * 0.62",
                                 },
                                 end: {
                                     x: "screenWidth/2",
