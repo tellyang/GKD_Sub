@@ -1,7 +1,7 @@
 {
     id: 870826,
     name: "个人规则",
-    version: 75,
+    version: 76,
     author: "❤️",
     checkUpdateUrl: "https://gh-proxy.org/https://raw.githubusercontent.com/tellyang/GKD_Sub/refs/heads/main/Custom.json5",
     categories: [
@@ -482,7 +482,7 @@
                                 "https://i.gkd.li/snapshot/1790072625590",
                                 "https://i.gkd.li/snapshot/1791824208841",
                             ],
-                            actionDelay: 500,
+                            actionDelay: 300,
                             resetMatch: "activity",
                             swipeArg: {
                                 start: {
@@ -495,7 +495,11 @@
                                 },
                                 duration: 250,
                             },
-                            excludeMatches: ['TextView[text="选集"][visibleToUser=true]'],
+                            excludeMatches: [
+                                'TextView[text="选集"][visibleToUser=true]',
+                                'TextView[text="剧情简介"][visibleToUser=true]',
+                                'TextView[text^="剧评"][visibleToUser=true]',
+                            ],
                             matches: ['TextView[text="选集"][visibleToUser=false]'],
                         },
                         {
@@ -523,7 +527,10 @@
                             actionDelay: 1000,
                             resetMatch: "match",
                             actionMaximum: 1,
-                            matches: ['TextView[text="第2集"] +2 ImageView[width=72][height=72]'],
+                            matches: [
+                                'TextView[text="相关推荐"][visibleToUser=true]',
+                                'TextView[text*="第"&&text*="集"] +2 ImageView[width=72][height=72]',
+                            ],
                         },
                         {
                             key: 2,
