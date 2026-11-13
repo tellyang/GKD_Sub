@@ -465,12 +465,12 @@
                 {
                     key: 1,
                     name: "广告：跳过游戏或直播",
-                    desc: "①点击右上角②点击不感兴趣或重复",
+                    desc: "上滑",
                     activityIds: ["com.dragon.read.component.shortvideo.impl.ShortSeriesActivity"],
                     rules: [
                         {
                             key: 1,
-                            name: "①点击右上角",
+                            name: "上滑",
                             snapshotUrls: [
                                 "https://i.gkd.li/snapshot/1783580713445",
                                 "https://i.gkd.li/snapshot/1785427774149",
@@ -482,7 +482,7 @@
                                 "https://i.gkd.li/snapshot/1790072625590",
                                 "https://i.gkd.li/snapshot/1791824208841",
                             ],
-                            actionDelay: 300,
+                            actionDelay: 500,
                             resetMatch: "activity",
                             swipeArg: {
                                 start: {
@@ -501,16 +501,6 @@
                                 'TextView[text^="剧评"][visibleToUser=true]',
                             ],
                             matches: ['TextView[text="选集"][visibleToUser=false]'],
-                        },
-                        {
-                            key: 2,
-                            name: "②点击不感兴趣 或 重复",
-                            snapshotUrls: [
-                                "https://i.gkd.li/snapshot/1783582339999",
-                                "https://i.gkd.li/i/29935121",
-                            ],
-                            preKeys: [1],
-                            matches: ['TextView[text="不喜欢该游戏" || text="减少重复出现"]'],
                         },
                     ],
                 },
