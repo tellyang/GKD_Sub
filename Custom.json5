@@ -1,7 +1,7 @@
 {
     id: 870826,
     name: "个人规则",
-    version: 77,
+    version: 78,
     author: "❤️",
     checkUpdateUrl: "https://gh-proxy.org/https://raw.githubusercontent.com/tellyang/GKD_Sub/refs/heads/main/Custom.json5",
     categories: [
@@ -514,7 +514,7 @@
                             key: 1,
                             name: "①点击右上角",
                             snapshotUrls: ["https://i.gkd.li/snapshot/1787024279732"],
-                            actionDelay: 1000,
+                            actionDelay: 30000,
                             resetMatch: "match",
                             actionMaximum: 1,
                             matches: [
