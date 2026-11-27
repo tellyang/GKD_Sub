@@ -1,7 +1,7 @@
 {
     id: 870826,
     name: "个人规则",
-    version: 78,
+    version: 79,
     author: "❤️",
     checkUpdateUrl: "https://gh-proxy.org/https://raw.githubusercontent.com/tellyang/GKD_Sub/refs/heads/main/Custom.json5",
     categories: [
@@ -465,12 +465,12 @@
                 {
                     key: 1,
                     name: "广告：跳过游戏或直播",
-                    desc: "上滑",
+                    desc: "关闭广告",
                     activityIds: ["com.dragon.read.component.shortvideo.impl.ShortSeriesActivity"],
                     rules: [
                         {
                             key: 1,
-                            name: "上滑",
+                            name: "①点击右上角",
                             snapshotUrls: [
                                 "https://i.gkd.li/snapshot/1783580713445",
                                 "https://i.gkd.li/snapshot/1785427774149",
@@ -481,26 +481,27 @@
                                 "https://i.gkd.li/snapshot/1784949581696",
                                 "https://i.gkd.li/snapshot/1790072625590",
                                 "https://i.gkd.li/snapshot/1791824208841",
+                                "https://i.gkd.li/i/29935121",
                             ],
                             actionDelay: 500,
                             resetMatch: "activity",
-                            swipeArg: {
-                                start: {
-                                    x: "screenWidth/2",
-                                    y: "screenHeight * 0.7",
-                                },
-                                end: {
-                                    x: "screenWidth/2",
-                                    y: "screenHeight * 0.3",
-                                },
-                                duration: 250,
-                            },
                             excludeMatches: [
                                 'TextView[text="选集"][visibleToUser=true]',
                                 'TextView[text="剧情简介"][visibleToUser=true]',
                                 'TextView[text^="剧评"][visibleToUser=true]',
                             ],
-                            matches: ['TextView[text="选集"][visibleToUser=false]'],
+                            matches: [
+                                'TextView[text="选集"][visibleToUser=false]',
+                                "ViewGroup[visibleToUser=true][childCount=0][index=0]",
+                            ],
+                        },
+                        {
+                            key: 2,
+                            name: "②点击不敢兴趣/广告太多",
+                            preKeys: [1],
+                            matches: [
+                                'TextView[text="不喜欢该游戏" || text="减少重复出现"][visibleToUser=true]',
+                            ],
                         },
                     ],
                 },
